@@ -6,7 +6,8 @@ import (
 	"github.com/nlopes/slack"
 )
 
-func startbot(token string) {
+// StartBot Starts bot
+func StartBot(token string) {
 
 	fmt.Printf("ST: %v\n", token)
 	api := slack.New(token)
