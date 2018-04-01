@@ -26,16 +26,11 @@ func appendToData(msg string) string {
 }
 
 func openUrl(urlToOpen string) string {
-	val, err := PersistGet("test")
-	if err != nil {
-		panic(err)
-	}
-
 	values := url.Values{"url": {"http://example.com"}}
 	resp, _ := http.PostForm("http://localhost:8080", values)
 	fmt.Printf("%v ", resp)
 
-	return val
+	return "ok"
 }
 
 func get(msg string) string {
