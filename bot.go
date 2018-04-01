@@ -1,15 +1,13 @@
-package main
+package mbot
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/nlopes/slack"
 )
 
-func main() {
+func startbot(token string) {
 
-	token := os.Getenv("SLACK_TOKEN")
 	fmt.Printf("ST: %v\n", token)
 	api := slack.New(token)
 	rtm := api.NewRTM()
